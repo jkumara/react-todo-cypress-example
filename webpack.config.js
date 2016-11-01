@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     "webpack-dev-server/client?http://0.0.0.0:8080",
     "webpack/hot/only-dev-server",
-    "./index.js",
+    "./src/index.js",
   ],
 
   output: {
