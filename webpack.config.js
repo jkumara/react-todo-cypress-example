@@ -43,12 +43,8 @@ module.exports = {
         exclude: /node_modules|docs|build/
       },
       {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: "url",
-        query: {
-          limit: 10000,
-          name: "/static/img/[name].[hash:7].[ext]"
-        }
+        test: /\.svg$/,
+        loader: 'svg-inline?classPrefix'
       }
     ]
   }

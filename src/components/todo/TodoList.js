@@ -2,7 +2,7 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
-import { removeTodo } from './todoReducer'
+import { removeTodo, toggleTodo } from './todoReducer'
 import { TodoListItem } from './TodoListItem'
 
 const List = styled.ul`
@@ -33,7 +33,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  removeTodo
+  removeTodo,
+  toggleTodo
 }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList)

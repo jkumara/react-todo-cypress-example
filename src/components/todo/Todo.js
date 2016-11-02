@@ -8,7 +8,7 @@ const Panel = styled.div`
   max-width: 35rem;
 
   background: ${p => p.theme.color.panelBg};
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05)
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.025)
   font-size: 1.5rem;
 `
 
