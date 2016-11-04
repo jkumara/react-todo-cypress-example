@@ -31,6 +31,7 @@ const Title = styled.h1`
   text-align: center;
   font-family: 'Damion';
   font-weight: normal;
+  text-shadow: 3px 0px 0px black;
 `
 
 const App = () => (

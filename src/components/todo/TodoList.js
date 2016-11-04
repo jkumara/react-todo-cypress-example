@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import styled from 'styled-components'
 import { removeTodo, toggleTodo } from './todoReducer'
 import { TodoListItem } from './TodoListItem'
+import { sortById } from './todoUtils'
 
 const List = styled.ul`
   margin: 0;
@@ -15,9 +16,12 @@ const List = styled.ul`
 
 // Component
 
-export const TodoList = ({todos, removeTodo}) => (
+export const TodoList = ({todos, removeTodo, toggleTodo}) => (
   <List>
-    { todos.map(t => <TodoListItem {...t} key={t.id} removeTodo={removeTodo} /> ) }
+    { sortById(todos).map(t => <TodoListItem {...t}
+                                   key={t.id}
+                                   toggleTodo={toggleTodo}
+                                   removeTodo={removeTodo} />)}
   </List>
 )
 

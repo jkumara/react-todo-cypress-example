@@ -1,21 +1,24 @@
 const colors = {
-  tulip: '#FE938C',
-  palegold: '#E6B89C',
-  desertsand: '#EAD2AC',
-  pewterblue: '#9CAFB7',
-  steelblue: '#4281A4',
-  wildsand: '#f5f5f5',
-  gallery: '#EDEDED',
   black: '#000',
+  oceanboatblue: '#0075C4',
+  burntorange: '#D65108',
+  gamboge: '#EFA00B',
+  gallery: '#EDEDED',
+  alto: '#d5d5d5',
   white: '#fff'
 }
 
 export default {
   color: {
-    title: colors.steelblue,
+    title: colors.oceanboatblue,
     text: colors.black,
-    bodyBg: colors.wildsand,
+    disabledText: colors.alto,
+    bodyBg: colors.white,
     panelBg: colors.white,
-    panelBorder: colors.gallery
+    panelBorder: colors.gallery,
+    icon: colors.burntorange,
+    toggleIcon: colors.gamboge,
+    toggleBorder: colors.gallery,
+    toggleActiveBorder: colors.gamboge
   }
 }

@@ -1,4 +1,4 @@
-import { generateTodo } from './todoUtils'
+import { generateTodo, toggleTodoDoneById, removeTodoById } from './todoUtils'
 
 const ADD = 'todo/add'
 const REMOVE = 'todo/remove'
@@ -22,10 +22,16 @@ export default function todoReducer(state = initialState, action) {
       }
     }
     case REMOVE: {
-      return state
+      return {
+        ...state,
+        todos: removeTodoById(state.todos, action.id)
+      }
     }
     case TOGGLE_DONE: {
-      return state
+      return {
+        ...state,
+        todos: toggleTodoDoneById(state.todos, action.id)
+      }
     }
     default: {
       return state
@@ -43,7 +49,9 @@ export const removeTodo = (id) => ({
   id
 })
 
-export const toggleTodo = (id) => ({
-  type: TOGGLE_DONE,
-  id
-})
+export const toggleTodo = (id) => {
+  return {
+    type: TOGGLE_DONE,
+    id
+  }
+}
