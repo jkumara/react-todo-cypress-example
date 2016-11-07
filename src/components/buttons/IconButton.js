@@ -30,8 +30,8 @@ const IconWrapper = styled.div`
   color: ${p => p.theme.color.icon}
 `
 
-export const IconButton = ({onClick, iconId, id}) => (
-  <Button id={id || ''} onClick={onClick}>
+export const IconButton = ({onClick, iconId, id, className}) => (
+  <Button id={id || ''} className={className || ''} onClick={onClick}>
     <IconWrapper>
       <Icon id={iconId} />
     </IconWrapper>
@@ -41,5 +41,6 @@ export const IconButton = ({onClick, iconId, id}) => (
 IconButton.propTypes = {
   onClick: React.PropTypes.func.isRequired,
   iconId: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string,
   id: React.PropTypes.string
 }

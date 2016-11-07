@@ -31,8 +31,8 @@ const Check = styled.div`
   animation: ${appear} 0.5s 1;
 `
 
-export const CheckButton = ({onClick, active, id}) => (
-  <Button id={id || ''} onClick={onClick} active={active}>
+export const CheckButton = ({onClick, active, id, className}) => (
+  <Button id={id || ''} className={className || ''} onClick={onClick} active={active}>
     <Check active={active}>
       <Icon id='check' />
     </Check>
@@ -42,5 +42,6 @@ export const CheckButton = ({onClick, active, id}) => (
 CheckButton.propTypes = {
   onClick: React.PropTypes.func.isRequired,
   active: React.PropTypes.bool.isRequired,
-  id: React.PropTypes.string
+  id: React.PropTypes.string,
+  className: React.PropTypes.string
 }

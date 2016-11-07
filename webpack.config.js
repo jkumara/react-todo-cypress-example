@@ -17,7 +17,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Todo list",
+      title: "Todo App",
       template: path.join(__dirname, "templates", "todo.ejs")
     })
   ],

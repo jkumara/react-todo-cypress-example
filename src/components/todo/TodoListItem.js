@@ -37,15 +37,15 @@ const Note = styled.div`
 export const TodoListItem = ({id, text, isDone, toggleTodo, removeTodo}) => (
   <ListItem>
     <ToggleButtonWrapper>
-      <CheckButton id={`btn-${id}`} onClick={toggleTodo.bind(null, id)} active={isDone} />
+      <CheckButton id={`check-${id}`} className="check" onClick={toggleTodo.bind(null, id)} active={isDone} />
     </ToggleButtonWrapper>
 
     <Note isDone={isDone}>
-      <label htmlFor={`btn-${id}`}>{text}</label>
+      <label htmlFor={`check-${id}`}>{text}</label>
     </Note>
 
     <RemoveButtonWrapper>
-      <IconButton onClick={removeTodo.bind(null, id)} iconId='cross' />
+      <IconButton id={`remove-${id}`} className="remove" onClick={removeTodo.bind(null, id)} iconId='cross' />
     </RemoveButtonWrapper>
   </ListItem>
 )
