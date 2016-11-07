@@ -6,11 +6,11 @@ export const generateTodo = text => ({
   isDone: false
 })
 
-const findById = id => R.find(R.propEq('id', id))
+export const findById = id => R.find(R.propEq('id', id))
 
-const rejectById = id => R.reject(R.propEq('id', id))
+export const rejectById = id => R.reject(R.propEq('id', id))
 
-const toggleTodoDone = todo => ({
+export const toggleTodoDone = todo => ({
   ...todo,
   isDone: !todo.isDone
 })
@@ -32,3 +32,7 @@ export const removeTodoById = (todos, id) => {
     ...rejectById(id)(todos)
   ]
 }
+
+export const getDone = todos => R.filter(R.prop('isDone'))(todos)
+
+export const getUndone = todos => R.reject(R.prop('isDone'))(todos)

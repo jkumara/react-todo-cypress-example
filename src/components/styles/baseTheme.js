@@ -11,6 +11,7 @@ const colors = {
 export default {
   color: {
     title: colors.oceanboatblue,
+    subtitle: colors.alto,
     text: colors.black,
     disabledText: colors.alto,
     bodyBg: colors.white,

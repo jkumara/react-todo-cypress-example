@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { injectGlobal, ThemeProvider } from 'styled-components'
-import theme from './baseTheme'
+import theme from '../styles/baseTheme'
 import Todo from '../todo/Todo'
 
 injectGlobal`
@@ -34,10 +34,18 @@ const Title = styled.h1`
   text-shadow: 3px 0px 0px black;
 `
 
+const Subtitle = styled.p`
+  margin: 1em 0;
+
+  font-size: 1rem;
+  text-align: center;
+`
+
 const App = () => (
     <ThemeProvider theme={theme}>
       <Wrapper>
         <Title>Todo</Title>
+        <Subtitle>Keep on top of your tasks.</Subtitle>
         <Todo />
       </Wrapper>
     </ThemeProvider>

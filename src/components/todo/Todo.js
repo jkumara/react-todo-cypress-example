@@ -2,9 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import TodoInput from './TodoInput'
 import TodoList from './TodoList'
+import TodoStats from './TodoStats'
 
 const Panel = styled.div`
-  margin: 2rem auto;
+  margin: 1em auto;
   max-width: 35rem;
 
   background: ${p => p.theme.color.panelBg};
@@ -13,10 +14,13 @@ const Panel = styled.div`
 `
 
 const Todo = () => (
+  <div>
     <Panel>
       <TodoInput />
       <TodoList />
     </Panel>
-  )
+    <TodoStats />
+  </div>
+)
 
 export default Todo
