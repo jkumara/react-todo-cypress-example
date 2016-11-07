@@ -35,7 +35,7 @@ class TodoInput extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
-        <TextInput innerRef={inp => this.input = inp} placeholder="What needs done?" />
+        <TextInput innerRef={inp => this.input = inp} placeholder="What needs to be done?" />
       </form>
     )
   }
