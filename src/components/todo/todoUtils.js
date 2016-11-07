@@ -1,5 +1,9 @@
 import R from 'ramda'
 
+export const saveToLocal = (data, key) => localStorage.setItem(key, JSON.stringify(data))
+
+export const loadFromLocal = key => JSON.parse(localStorage.getItem(key))
+
 export const generateTodo = text => ({
   text,
   id: new Date().getTime(),
