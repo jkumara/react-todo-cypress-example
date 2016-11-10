@@ -2,7 +2,7 @@
  
  A simple Todo-app with React, Redux and Cypress.io for integration tests.
 
- ## How to run
+## How to run
 
 ```
  npm install
